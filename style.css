@@ -1,0 +1,141 @@
+/*All of the pictures show up in my safari browser, however, I can't get them to appear when i open the file with google chrome. At the bottom when i open developer tools it says ("
+index.html:1 A cookie associated with a cross-site resource at https://uconn.bootcampcontent.com/ was set without the `SameSite` attribute. A future release of Chrome will only deliver cookies with cross-site requests if they are set with `SameSite=None` and `Secure`. You can review cookies in developer tools under Application>Storage>Cookies and see more details at https://www.chromestatus.com/feature/5088147346030592 and https://www.chromestatus.com/feature/5633521622188032.
+7Cross-Origin Read Blocking (CORB) blocked cross-origin response <URL> with MIME type text/html. See <URL> for more details.
+index.html:32 Cross-Origin Read Blocking (CORB) blocked cross-origin response https://uconn.bootcampcontent.com/users/sign_in with MIME type text/html. See https://www.chromestatus.com/feature/5629709824032768 for more details.") 
+I tried to figure out how to make the website responsive prior to class this past monday 5/11 when we were told we didn't have to do that. Instead of re-doing it, I just left what I did.
+I changed all of the fonts and heights/widths from PX to VW or VH . I also changed padding amd margins from px to REM to do the same, although when we get there I have a lot of questions about the differences and as far as rem for padding/margins, text still seems to fall out of its "box".*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+    background-color: #d9dcd6;
+}
+header {
+    padding: 1.25rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #2a607c;
+    color: #ffffff;
+}
+
+
+header h1 {
+    display: inline-block;
+    font-size: 4.8vw;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 1.56rem;  
+    padding-top: .5rem;
+    margin-right: 1.25rem;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.0vw;
+}
+/* this element does not seem to be neccessary, since all other p tags are wrapped in classes, this style is not affecting those p tag
+p {
+    font-size: 16px;
+}
+*/
+.hero {
+    height: 112.9vh;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("https://uconn.bootcampcontent.com/university-of-connecticut/conn-stmf-fsf-pt-05-2020-u-c/raw/d3be9d87257958eeeca98a6404e5f4cd6e5bcfac/01-HTML-Git-CSS/02-Homework/Develop/assets/images/digital-marketing-meeting.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.float-left {
+    float: left;
+    margin-right: 1.56rem;
+}
+
+.float-right {
+    float: right;
+    margin-left: 1.56rem;
+}
+
+.content {
+    max-width: 75%;
+    display: inline-block;
+    margin-left: 1.56rem;
+}
+.content h2{
+    font-size: 3.6vw;
+    margin-bottom: .63rem;
+    position: relative;
+    
+}
+.benefits {
+    margin-right: 1.25rem;
+    margin-bottom: 2rem;
+    color:#ffffff;
+    padding: 1.25rem;
+    clear: both;
+    float: right;
+    max-width: 20%;
+    max-height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+    text-align: center;
+}
+
+/* I removed the individual classes that were within each of the h3 elements and used the one div class enveloping them (.Benefits) which allows them all to be styled the same*/
+.benefits h3{
+    margin-bottom: .625rem;
+    font-size: 2.4vw;
+}
+/* In order to style the P tags specifically I used the class they were in, .Benefits, and P. This also allows them all to be styled the same*/ 
+.benefits p{
+    font-size: 1vw;
+    margin-bottom: 2rem;
+
+}
+/* since all of the images under this class had the same properties, I changed the class from indivdual img classes to the div class enveloping all three images.*/
+.benefits img {
+    display: block;
+    margin: .625rem auto;
+    max-width: 10vw;
+    font-size: .8vw;
+}
+/*since all of these ID's had the same style, I condensed them to be more organized*/
+#search-engine-optimization,
+#online-reputation-management,
+#social-media-marketing
+ {
+    margin-bottom: 1.25rem;
+    padding: 3.13rem;
+    height: 48vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+/*since all of these ID's had the same style, I condensed them to be more organized*/
+#search-engine-optimization img,
+#social-media-marketing img,
+#online-reputation-management img
+ {
+    height: 29vh;
+    width: 13vw;
+    font-size: .8vw;
+}
+/* removed the style footer h2 and just put all of the styles under the footer element*/
+footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+
